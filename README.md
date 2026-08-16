@@ -12,19 +12,17 @@ The API manages a **Books** resource with 5 attributes:
 ---
 
 ## Tested API Endpoints
-
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| `GET` | `http://localhost:4000/` | Root route |
-| `GET` | `http://localhost:4000/health` | Server health status check |
+| `GET` | `http://localhost:4000/` |   Root route |
+| `GET` | `http://localhost:4000/health` |  Server health status check |
 | `GET` | `http://localhost:4000/api/books` | Fetch all books |
-| `GET` | `http://localhost:4000/api/books/:id` | Fetch single book by ID |
-| `POST` | `http://localhost:4000/api/books` | Add a new book (with input validation) |
+| `GET` | `http://localhost:4000/api/books/:id` |  Fetch single book by ID |
+| `POST` | `http://localhost:4000/api/books` |  Add a new book (validation done on input) |
 
 ---
 
 ## Sample POST Request Bodies (Added Items)
-
 ### Item 1
 ```json
 {
@@ -73,7 +71,7 @@ The API manages a **Books** resource with 5 attributes:
 }
 
 ```
-### Missing Required Fields Validation Check
+## Missing Required Fields Validation Check
 ```json
 {
   "author": "Unknown Author",
@@ -82,7 +80,7 @@ The API manages a **Books** resource with 5 attributes:
 ```
 All required fields need to be entered. 400 Bad Request
 
-### Invalid Data Type Validation Check
+## Invalid Data Type Validation Check
 ```json
 {
   "title": "Invalid Price Book",
